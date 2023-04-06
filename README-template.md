@@ -18,7 +18,7 @@
 ## Links
 
 - [Solution URL](https://github.com/hmehta051/comment-section)
-- [Live Site URL](https://interactive-comments-section-nine.vercel.app)
+- [Live Site URL](https://comment-section-mu.vercel.app/)
 
 ## Built with
 
