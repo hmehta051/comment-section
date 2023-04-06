@@ -1,6 +1,6 @@
 # Interactive comments section
 
-![](./src/Assets/images/screenshot.png)
+![](./src/screenshot.png)
 
 ## The challenge
 
