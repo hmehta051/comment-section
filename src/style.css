@@ -1,0 +1,324 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap");
+
+:root {
+    --background-gray: hsl(228, 33%, 97%);
+    --Dark-blue: hsl(212, 24%, 26%);
+    --Moderate-blue: hsl(238, 40%, 52%);
+    --Grayish-blue: hsl(211, 10%, 45%);
+    --soft-red: hsl(358, 79%, 66%);
+    --header-gray: hsl(212, 24%, 26%);
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    margin: 30px 10px;
+    background-color: var(--background-gray);
+    font-size: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+div,
+span {
+    margin: 0;
+    padding: 0;
+}
+
+.username {
+    font-weight: 500;
+    padding: 0 8px;
+    color: rgb(56, 56, 56);
+}
+
+.comment-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    background-color: white;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    color: var(--Grayish-blue);
+    font-weight: 300;
+}
+
+.comment-section {
+    max-width: 800px;
+}
+
+.comment-top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.created-at {
+    margin-right: auto;
+    margin-left: 15px;
+}
+
+.rating-container {
+    background-color: var(--background-gray);
+    padding: 6px 1px;
+    min-width: 35px;
+    margin-right: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+}
+
+.count-button {
+    color: rgb(170, 170, 170);
+    cursor: pointer;
+}
+
+.count-button:hover {
+    color: rgb(100, 100, 100);
+}
+
+.count {
+    margin: 5px 0;
+    color: var(--Moderate-blue);
+}
+
+.blue-button > span {
+    color: var(--Moderate-blue);
+    font-weight: 400;
+    padding-left: 5px;
+    cursor: pointer;
+}
+
+.blue-button:hover {
+    opacity: 75%;
+}
+
+.edit-button > span {
+    color: var(--Moderate-blue);
+    font-weight: 400;
+    padding-left: 5px;
+}
+
+.you-button {
+    display: flex;
+    cursor: pointer;
+}
+
+.you-button > div:hover {
+    opacity: 75%;
+}
+
+.comment-delete {
+    color: var(--soft-red);
+    font-weight: 400;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.comment-delete span {
+    margin-left: 5px;
+}
+
+.comment-you {
+    background-color: var(--Moderate-blue);
+    color: white;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+.comment-content {
+    flex: auto;
+}
+
+.reply-container {
+    flex: auto;
+}
+.avatar {
+    height: 35px;
+}
+
+.replies-divider {
+    border-right: 2px solid rgb(230, 230, 230);
+    align-self: stretch;
+    margin-right: 10px;
+    margin-left: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.replies {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+}
+
+.modal-background {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.418);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-container {
+    background-color: white;
+    max-width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.modal-container h2 {
+    margin-bottom: 15px;
+    color: var(--header-gray);
+}
+
+.modal-container p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: var(--Grayish-blue);
+    font-weight: 300;
+}
+
+.modal-button {
+    border-style: none;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.modal-buttons-container {
+    display: flex;
+}
+
+.button-cancel {
+    margin-right: 10px;
+    background-color: var(--Grayish-blue);
+    color: white;
+}
+
+.button-proceed {
+    background-color: var(--soft-red);
+    color: white;
+}
+
+.button-cancel:hover {
+    background-color: hsl(212, 10%, 33%);
+}
+
+.button-proceed:hover {
+    background-color: hsl(358, 62%, 62%);
+}
+
+textarea {
+    resize: none;
+    border: 1px solid rgb(216, 216, 216);
+    border-radius: 6px;
+    padding: 10px 15px;
+    flex-grow: 1;
+    height: 4rem;
+    margin: 0 10px;
+    font-family: inherit;
+    color: var(--Grayish-blue);
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+textarea:focus {
+    outline: none;
+    border: 1px solid rgb(90, 90, 90);
+}
+
+.editor-button {
+    background-color: var(--Moderate-blue);
+    color: white;
+    border-style: none;
+    padding: 8px 20px;
+    min-width: 4.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.editor-button:hover {
+    opacity: 75%;
+}
+
+.mention {
+    color: var(--Moderate-blue);
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.commentEdit {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-textarea {
+    margin: 10px 0px;
+}
+
+.update {
+    width: min-content;
+    padding: 8px 20px;
+    margin-left: auto;
+}
+
+@media screen and (max-width: 600px) {
+    .comment-container {
+        flex-direction: column-reverse;
+        position: relative;
+    }
+
+    .rating-container {
+        flex-direction: row;
+        padding: 1px 6px;
+        min-height: 35px;
+        margin-top: 15px;
+    }
+
+    .count {
+        margin: 0 15px;
+    }
+
+    .blue-button {
+        position: absolute;
+        bottom: 30px;
+        right: 30px;
+    }
+
+    .you-button {
+        position: absolute;
+        bottom: 30px;
+        right: 30px;
+    }
+
+    .replies-divider {
+        margin-left: 15px;
+        margin-right: 8px;
+    }
+}
